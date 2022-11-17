@@ -17,7 +17,7 @@ def main():
                    layout="wide")
 
     # get the absolute path of all Excel files
-    allExcelFiles = glob.glob("https://github.com/ashutosh-mohanty90/DashboardDemo.git/*.xlsx")
+    allExcelFiles = glob.glob("https://github.com/ashutosh-mohanty90/DashboardDemo/blob/main/ExecutionReports/*.xlsx")
 
     # read all Excel files at once
     df = pd.concat(pd.read_excel(excelFile,sheet_name='Sheet1',skiprows=2,usecols='B:H',nrows=8) for excelFile in allExcelFiles)
